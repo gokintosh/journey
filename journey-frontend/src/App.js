@@ -6,13 +6,14 @@ import ThirdComponent from './components/learning-examples/ThirdComponent'
 import './App.css'
 import Counter from './components/counter/Counter';
 
+
+
+
 class App extends Component{
   render(){
     return(
       <div className="App">
         <Counter/>
-        <Counter by={5}/>
-        <Counter by={10}/>
         
       </div>
     );
