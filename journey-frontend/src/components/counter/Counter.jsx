@@ -11,6 +11,7 @@ export default class Counter extends Component{
             counter:0
         }
         this.increment=this.increment.bind(this);
+        this.reset=this.reset.bind(this)
     }
     render(){
       return(
@@ -18,12 +19,18 @@ export default class Counter extends Component{
           <CounterButton incrementmethod={this.increment}/>
           <CounterButton by={5} incrementmethod={this.increment}/>
           <CounterButton by={10} incrementmethod={this.increment}/>
-          
+          <div><button onClick={this.reset}>Reset</button></div>
 
           <span className="count">{this.state.counter}</span>
           
         </div>
       );
+    }
+    reset(){
+        this.setState(
+            (prevState)=>{
+                return {counter:0}
+            });
     }
 
 
@@ -54,11 +61,14 @@ class CounterButton extends Component
             {/* props from the counter button above (by) */}
               <button onClick={this.increment}>+{this.props.by}</button>
               <button onClick={this.decrement}>-{this.props.by}</button>
+              
               {/* <span className="count">{this.state.counter}</span> */}
               {/* we dont need to add this */}
             </div>
           )
     }
+
+
     decrement(){
         this.props.incrementmethod(-(this.props.by))
     }
