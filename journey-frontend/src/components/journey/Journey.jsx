@@ -23,7 +23,7 @@ export default class Journey extends Component{
                 </Router>
 
                 {/* <WelcomeComponent/> */}
-                {/* <LoginComponent/> */} 
+                {/* <LoginComponent/> */}
             </div>
         )
     }
