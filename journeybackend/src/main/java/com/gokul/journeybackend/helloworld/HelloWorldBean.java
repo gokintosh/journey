@@ -1,4 +1,4 @@
-package com.gokul.journeybackend;
+package com.gokul.journeybackend.helloworld;
 
 public class HelloWorldBean {
     private String message;

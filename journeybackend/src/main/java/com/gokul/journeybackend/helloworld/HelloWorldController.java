@@ -1,4 +1,4 @@
-package com.gokul.journeybackend;
+package com.gokul.journeybackend.helloworld;
 
 
 import org.springframework.web.bind.annotation.*;
